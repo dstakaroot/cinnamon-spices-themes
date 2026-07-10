@@ -267,17 +267,17 @@ button {
         transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   button:hover {
     color: #00FF00;
-    outline-color: rgba(0, 255, 0, 0.3);
+    outline-color: rgba(0, 255, 0, 0.5);
     border-color: #003000;
-    background-color: rgba(0, 80, 0, 0.3);
+    background-color: rgba(0, 80, 0, 0.5);
     -gtk-icon-effect: highlight; }
   button:active, button:checked {
     color: #00FF00;
-    outline-color: rgba(0, 255, 0, 0.3);
-    border-color: #002000;
-    background-color: rgba(0, 150, 0, 0.7);
-    background-clip: padding-box;
-    transition-duration: 50ms; }
+    outline: none;
+    border: 1px solid #003000;
+    background-color: rgba(0, 80, 0, 0.3);
+    box-shadow: none; -gtk-icon-shadow: none;
+    background-clip: padding-box; }
     button:active:not(:disabled) label:disabled, button:checked:not(:disabled) label:disabled {
       color: inherit;
       opacity: 0.6; }
@@ -1728,24 +1728,27 @@ notebook {
     notebook > header.right > tabs > tab:hover:not(:checked) {
       box-shadow: inset 1px 0 #00FF00; }
     notebook > header > tabs > tab {
-      color: #003000;
-      background-color: #000000; }
-      notebook > header > tabs > tab:hover:not(:checked) {
-        color: #008000;
-        background-color: rgba(0, 48, 0, 0.2);
-        border-color: #003000; }
-      notebook > header > tabs > tab:checked {
-        color: #00FF00;
-        background-color: #000000;
-        border-color: #003000; }
-      notebook > header > tabs > tab button.flat {
+      color: #00ff00;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #003000; box-shadow: none; }
+     notebook > header > tabs > tab:hover:not(:checked) {
+       color: #00ff00;
+       background-color: #001000;
+       border: 1px solid #003000; box-shadow: none; }
+     notebook > header > tabs > tab:checked {
+       color: #00FF00;
+       background-color: #003000; border: 1px solid #003000; box-shadow: none; }
+     notebook > header > tabs > tab button.flat {
         min-height: 22px;
         min-width: 16px;
         padding: 0;
-        color: #003000; }
-        notebook > header > tabs > tab button.flat:hover {
+        color: #004000; }
+        notebook > header > tabs > tab button.flat:hover,
+        notebook > header > tabs > tab:checked button.flat:hover,
+        notebook > header > tabs > tab:selected button.flat:hover {
           color: #ff4d4d; }
-        notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.flat:active:hover {
+        notebook > header > tabs > tab:checked button.flat,
+        notebook > header > tabs > tab:selected button.flat {
           color: #00FF00; }
     notebook > header button.flat {
       padding: 2px; }
@@ -2620,10 +2623,9 @@ paned > separator {
   min-width: 1px;
   min-height: 1px;
   -gtk-icon-source: none;
-  border-style: none;
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #000000, #000000);
-  background-size: 1px 1px; }
+  border: 1px solid #003000;
+  background-color: #000000;
+  box-shadow: none; }
   paned > separator:selected {
     background-image: linear-gradient(to bottom, #00FF00, #00FF00); }
   paned > separator.wide {
@@ -4264,8 +4266,59 @@ window.background.csd headerbar box.horizontal.linked button.image-button {
     border-radius: 4px;
     margin-left: 0; }
 
+window.background.csd headerbar box.horizontal.linked entry.search {
+  min-height: 24px;
+  padding: 0 6px;
+  border-right: 1px solid #00FF00; }
 
+window.background box.vertical toolbar.horizontal toolitem entry.catfish_search_entry {
+  -GtkWidgets-width-request: 200;
+  -GtkEntry-horizontal-expansion: false;
+  min-width: 200px;
+  border: 1px solid #003000;
+  border-radius: 4px;
+  margin-right: 6px; }
 
+.catfish-window window.background.csd headerbar.titlebar button.image-button.popup.toggle,
+catfish window.background.csd headerbar.titlebar button.image-button.popup.toggle {
+  margin-top: 1px;
+  margin-bottom: 0;
+  min-height: 24px;
+  max-height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;}
+.catfish-window window.background.csd headerbar.titlebar button.image-button.popup.toggle:hover,
+catfish window.background.csd headerbar.titlebar button.image-button.popup.toggle:hover {
+  background-clip: padding-box;
+  min-height: 24px;
+  max-height: 24px;
+  box-shadow: none; }
+
+menubutton button,combobox button.combo,button.popup.toggle {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  min-height: 20px; }
+
+/*********************************
+ ! Side Toolbar Button Custom
+ *********************************/
+
+toolbar.vertical > toolbutton > button.flat,
+toolbar.vertical > toolbutton > button.flat.toggle,
+toolbar.vertical > toolbutton > button.flat.image-button {
+  border: 1px solid #003000;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 4px;
+  margin: 0 2px; }
+toolbar.vertical > toolbutton + toolbutton > button.flat,
+toolbar.vertical > toolbutton + toolbutton > button.flat.toggle,
+toolbar.vertical > toolbutton + toolbutton > button.flat.image-button {
+  margin-top: -1px; }
 
 
 
