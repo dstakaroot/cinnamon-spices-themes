@@ -1,42 +1,44 @@
-Cinnamon Hacker Theme
+# Cinnamon Hacker Theme
 
-Version: 2.0 (Refined)
+A dark theme for Cinnamon, based on "Pure Black and Neon Green."
 
-<<<<<<< master
-Credits
-SVG assets: Based on Tyr-jord's work.
-=======
-## Description
-A clean dark theme for Cinnamon, designed with a focus on translucency and visual consistency.
+## Version: 2.0 (Refined)
+
+## What's New in v2.0
+- **GTK 2.0 & 3.0 Support:** Added fully optimized custom theme assets, ensuring a unified experience from legacy utilities to system dialogs.
+- **GTK 4.0 Support:** Fully implemented cohesive styling for modern application layers, featuring a unified solid flat black alignment and maximum neon green responsiveness.
+- **Cinnamon Shell Bugfixes:** Fine-tuned core shell elements to prevent alignment issues and maintain rigid grid balance.
+- **Graphic Assets:** Completed clean physics-level SVG optimization inside internal assets directories.
+
+## Screenshots
+![Theme Preview](Screenshot.png)
 
 ## Recommended Icons
-To get the full look as shown in the screenshots, I highly recommend using the **Dedicated to Hacker** icon theme.
-- **Icon Theme:** [Download Dedicated to Hacker Icons](https://www.pling.com/s/Gnome/p/2332618)
+To achieve the complete unified cyber look as shown in the screenshots, it is highly recommended to use the **Dedicated to Hacker** icon theme alongside this layout.
+- **Icon Theme Download:** [Dedicated to Hacker Icons (OpenDesktop)](https://opendesktop.org)
+- **Alternative Mirror:** [Dedicated to Hacker Icons (Pling)](https://pling.com)
 
-> **Note:** I am also planning to develop a matching GTK theme for apps in the future. Stay tuned!
->>>>>>> master
+## Installation
 
-Description
-A high-end dark theme for Cinnamon, strictly tuned to "Pure Black and Neon Green." This update focuses on visual consistency across all layers of the OS, eliminating impurities and enforcing the neon rule.
+### For Single User:
+Place the `cinnamon-Hacker` folder inside your local directory:
+```bash
+~/.themes/
+```
 
-What's New in v2.0
-GTK 2.0 / 3.0 Support: Finally added! I have poured everything I have into these. It is the limit of what I can achieve at this moment, ensuring a unified experience from legacy apps to system dialogs.
-Cinnamon Bugfixes: Minor bugfixes to the shell to ensure the "Rule" is maintained.
-GTK 4.0: Currently under development.
+### System-wide (Recommended):
+Place the folder in the system theme directory to ensure neon green dominance even in root-level applications (e.g., Synaptic):
+```bash
+/usr/share/themes/
+```
 
-Installation
-For user only: Place the cinnamon-Hacker folder in your ~/.themes directory.
-System-wide (Recommended): Place the folder in /usr/share/themes.
-(Installing here ensures the neon green dominance even in root-level apps like Synaptic.)
+## Credits
+- **SVG Assets:** Based on Tyr-jord's baseline graphic work.
 
-Recommended Icons
-To get the full look as shown in the screenshots, I highly recommend using the Dedicated to Hacker icon theme.
-Icon Theme Address:https://www.opendesktop.org/s/Gnome/p/2332618
+## Author
+- **dstakaroot**
 
-Author
-dstakaroot
-
-License
+## License
 GPLv3
 
 
