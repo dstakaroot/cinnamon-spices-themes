@@ -13,10 +13,6 @@ A dark theme for Cinnamon, based on "Pure Black and Neon Green."
 ## Screenshots
 ![Theme Preview](Screenshot.png)
 
-## Recommended Icons
-To achieve the complete unified cyber look as shown in the screenshots, it is highly recommended to use the **Dedicated to Hacker** icon theme alongside this layout.
-- **Icon Theme Download:** [Dedicated to Hacker Icons (OpenDesktop)](https://opendesktop.org)
-- **Alternative Mirror:** [Dedicated to Hacker Icons (Pling)](https://pling.com)
 
 ## Installation
 
